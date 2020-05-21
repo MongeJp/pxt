@@ -1,0 +1,39 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+<block type="pxt-on-start">
+<statement name="HANDLER">
+<block type="typescript_statement">
+<mutation numlines="1" error="No output expressions as statements" line0="testNamespace.noArgumentOutput&#40;&#41;" />
+<next>
+<block type="typescript_statement">
+<mutation numlines="1" error="No output expressions as statements" line0="testNamespace.booleanArgumentOutput&#40;true&#41;" />
+<next>
+<block type="typescript_statement">
+<mutation numlines="1" error="No output expressions as statements" line0="testNamespace.numberArgumentOutput&#40;5&#41;" />
+<next>
+<block type="typescript_statement">
+<mutation numlines="1" error="No output expressions as statements" line0="testNamespace.stringArgumentOutput&#40;&#34;okay&#34;&#41;" />
+<next>
+<block type="typescript_statement">
+<mutation numlines="1" error="No output expressions as statements" line0="testNamespace.enumArgumentOutput&#40;TestEnum.testValue1&#41;" />
+<next>
+<block type="typescript_statement">
+<mutation numlines="1" error="No output expressions as statements" line0="testNamespace.enumFunctionArgumentOutput&#40;EnumWithValueBlock.testValue2&#41;" />
+<next>
+<block type="typescript_statement">
+<mutation numlines="1" error="No output expressions as statements" line0="testNamespace.multipleArgumentsOutput&#40;2&#44; false&#41;" />
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

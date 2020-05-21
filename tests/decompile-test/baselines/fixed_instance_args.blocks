@@ -1,0 +1,19 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+<block type="pxt-on-start">
+<statement name="HANDLER">
+<block type="fi_arg">
+<field name="p">pins2.A3</field>
+<next>
+<block type="typescript_statement">
+<mutation declaredvars="___x" numlines="1" error="No call info found" line0="let ___x&#58; PwmPin &#61; pins2.A5&#59;" />
+<next>
+<block type="typescript_statement">
+<mutation numlines="1" error="Arguments of a fixed instance type must be a reference to a fixed instance declaration" line0="pins2.fixedInstanceArg&#40;___x&#41;&#59;" />
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

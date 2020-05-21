@@ -1,0 +1,69 @@
+CACHE MANIFEST
+
+CACHE:
+/blb/semantic.js
+/blb/main.js
+/blb/pxtapp.js
+/blb/typescript.js
+/blb/marked/marked.min.js
+/blb/highlight.js/highlight.pack.js
+/blb/jquery.js
+/blb/pxtlib.js
+/blb/pxtcompiler.js
+/blb/pxtpy.js
+/blb/pxtblockly.js
+/blb/pxtwinrt.js
+/blb/pxteditor.js
+/blb/pxtsim.js
+/blb/pxtembed.js
+/blb/pxtworker.js
+/blb/pxtweb.js
+/blb/blockly.css
+/blb/semantic.css
+/blb/rtlsemantic.css
+@defaultLocaleStrings@
+@cachedHexFiles@
+@targetEditorJs@
+@targetFieldEditorsJs@
+
+# blockly
+/cdn/blockly/media/sprites.png
+/cdn/blockly/media/click.mp3
+/cdn/blockly/media/disconnect.wav
+/cdn/blockly/media/delete.mp3
+
+# monaco; keep in sync with webapp/public/index.html
+/blb/vs/loader.js
+/blb/vs/base/worker/workerMain.js
+/blb/vs/basic-languages/bat/bat.js
+/blb/vs/basic-languages/cpp/cpp.js
+/blb/vs/basic-languages/python/python.js
+/blb/vs/basic-languages/markdown/markdown.js
+/blb/vs/editor/editor.main.css
+/blb/vs/editor/editor.main.js
+/blb/vs/editor/editor.main.nls.js
+/blb/vs/language/json/jsonMode.js
+/blb/vs/language/json/jsonWorker.js
+
+# charts
+/blb/smoothie/smoothie_compressed.js
+/blb/images/Bars_black.gif
+
+# gifjs
+/blb/gifjs/gif.js
+
+# ai
+/blb/ai.0.js
+
+@workerjs@
+@monacoworkerjs@
+
+@timestamp@
+
+# target
+@targetImages@
+
+/blb/target.js
+
+NETWORK:
+*

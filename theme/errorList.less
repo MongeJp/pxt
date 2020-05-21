@@ -1,0 +1,82 @@
+@import 'themes/pxt/globals/site.variables';
+
+// Expanded error list
+.errorList {
+    position: relative;
+    max-height: @errorListHeight;
+    min-height: @errorListHeight;
+    border-top: 2px @errorListBorderColor solid;
+
+    .errorListHeader {
+        padding: 0.75em 1em;
+        height: @errorListHeaderHeight;
+        margin-bottom: 0;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        h4 {
+            margin: 0;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .countBubble {
+            margin-left: 1em;
+        }
+
+        .toggleButton {
+            float: right;
+            cursor: pointer;
+            position: relative;
+            vertical-align: middle;
+
+            i {
+                font-size: 1.3em;
+            }
+
+            i:not(:hover) {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .errorListInner {
+        height: @errorListInnerHeight;
+        padding: 0 0 1em 0;
+        overflow-y: scroll;
+
+        .ui.selection.list {
+            color: black;
+
+            .item {
+                border-radius: unset;
+                padding: 0.5em 1em;
+                color: black;
+
+                &:hover {
+                    background-color: @errorListMessageHoverColor;
+                }
+
+                &:nth-child(even):not(:hover) {
+                    background-color: @errorListEven;
+                }
+
+                &:nth-child(odd):not(:hover) {
+                    background-color: @errorListOdd;
+                }
+            }
+        }
+
+    }
+}
+
+// collapsed error list
+.errorList.errorListSummary {
+    min-height: unset;
+
+    &:hover {
+        background-color: @errorListMessageHoverColor;
+    }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "pxt",
+  "version": "0.5.1",
+  "description": "MakeCode (PXT) - command line interface",
+  "keywords": [
+    "TypeScript",
+    "JavaScript",
+    "education",
+    "microbit"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microsoft/pxt.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://github.com/microsoft/pxt#readme",
+  "files": [
+    "README.md",
+    "cli.js",
+    "pxt"
+  ],
+  "preferGlobal": true,
+  "bin": {
+    "pxt": "./pxt"
+  },
+  "engines": {
+    "node": ">= 4.4.5"
+  },
+  "dependencies": {}
+}

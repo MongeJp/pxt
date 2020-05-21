@@ -1,0 +1,13 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+<block type="pxt-on-start">
+<statement name="HANDLER">
+<block type="shadow_fixed_template">
+<value name="img">
+<shadow type="fixshim">
+<field name="f">1234</field>
+</shadow>
+</value>
+</block>
+</statement>
+</block>
+</xml>

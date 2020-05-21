@@ -1,0 +1,5 @@
+
+/**
+ * More
+ */
+testNamespace.booleanArgument(true)

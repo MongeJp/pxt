@@ -1,0 +1,9 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+<block type="pxt-on-start">
+<statement name="HANDLER">
+<block type="test_enum_argument">
+<field name="arg">TestEnum.testValue1</field>
+</block>
+</statement>
+</block>
+</xml>

@@ -1,0 +1,15 @@
+{
+    "name": "test-compile",
+    "description": "Project that defines a variety of blocks to be used in blockly compiler test cases",
+    "files": [
+        "actionEvent.ts",
+        "enums.ts",
+        "mbit.ts",
+        "expandableBlocks.ts",
+        "spritekind.ts",
+        "toStringArgs.ts"
+    ],
+    "public": true,
+    "dependencies": {},
+    "installedVersion": "file:."
+}

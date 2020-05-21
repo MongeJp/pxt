@@ -1,0 +1,17 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+<block type="test_handler_arguments">
+<statement name="HANDLER">
+</statement>
+</block>
+<block type="test_handler_arguments">
+<field name="HANDLER_a">a</field>
+<statement name="HANDLER">
+</statement>
+</block>
+<block type="test_handler_arguments">
+<field name="HANDLER_a">one</field>
+<field name="HANDLER_b">two</field>
+<statement name="HANDLER">
+</statement>
+</block>
+</xml>

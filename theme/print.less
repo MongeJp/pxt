@@ -1,0 +1,155 @@
+/*******************************
+        Print only
+*******************************/
+
+@media only print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    p:first-line,
+    div:first-line,
+    blockquote:first-line,
+    li:first-line {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        overflow: visible !important;
+    }
+    .injectionDiv {
+        overflow: hidden !important;
+    }
+
+    /* bigger fonts */
+    body {
+        color: #000 !important; /* explicit colors */
+        background: #fff !important;        
+        font-size: 12pt;
+        line-height: 1.3;
+        position: inherit !important;
+    }        
+    
+    #docs {
+        position: inherit !important; /* otherwise prints a single page */
+
+        .ui.segment, .ui.centered.card, .ui.content, iframe, .nobreak, pre, code, blockquote,
+        .ui.item, .ui.card {
+            page-break-inside: avoid;
+        }
+        h1, h2, h3, h4, h5, h6, img {
+            page-break-inside: avoid;
+            page-break-after: avoid;
+        }
+        ul, ol, dl {
+            page-break-before: avoid !important;
+        }
+        /* hide videos */
+        div.ui.embed.mdvid {
+            display: none !important;
+        }
+        /* links */
+        a:link, a:visited {
+            color: #000;
+            font-weight: bolder;
+            text-decoration: none;
+        }    
+        a:after {
+            content:" (" attr(href) ") ";
+            font-size:0.8em;
+            font-weight:normal;
+        }
+        /* page breaks */
+        img, h2, h3 {
+            page-break-inside: avoid;
+        }
+        /* headers, footers */
+        /* messages */
+        .ui.message {
+            background: none !important;
+            color: black !important;
+            box-shadow: none !important;
+        }
+        /* images */
+        .ui.image {
+            max-width: 60%;
+        }
+
+        .mainbody .ui.segment, pre {
+            background: none !important;
+        }
+
+        /* inline blocks*/
+        span.docs.inlineblock {
+            background: none !important;
+            border: black 2px solid !important;        
+        }
+        /* avatar */
+        .avatar .avatar-image, .avatar .ui.compact.message::after {
+            display: none !important;
+        }
+        .avatar .ui.compact.message {
+            border: black 2px solid !important;
+        }
+    }
+
+    /* page margins */
+    @page {
+        margin-top: 2cm;
+        margin-left: 2cm;
+        margin-right: 2cm;
+        margin-bottom: 2cm;
+    }
+
+    /** blockly **/
+    svg, .pxt-renderer {
+        .blocklyPath {
+            stroke-width: 3px !important;
+            stroke: black !important;
+            fill: white !important;
+        }
+        .blocklyBlockBackground, .blocklyLedOff {
+            stroke-width: 2px !important;
+            stroke: black !important;
+            fill: white !important;
+        }
+        .blocklyText, .blocklyDropdownText {
+            fill: black !important;
+        }
+        .blocklyLedOn {
+            stroke-width: 2px !important;
+            stroke: black !important;
+            fill: black !important;
+        }
+        .blocklyOutlinePath,
+        .blocklyFieldRect.blocklyDropdownRect {
+            stroke-width: 2px !important;
+            stroke: black !important;
+            fill: transparent !important;
+        }
+        /* comments */
+        .blocklyCommentRect {
+            fill: white !important;
+            stroke: black !important;
+        }
+        .blocklyCommentTextarea {
+            overflow: hidden !important;
+        }
+        .blocklyCommentTarget, .blocklyCommentHandleTarget, .blocklyResizeSE {
+            display: none !important;
+        }
+        .blocklyToggleRect {
+            fill: white !important;
+        }
+        .blocklyText.blocklyToggleText {
+            fill: black !important;
+        }
+    }
+
+    .codesnippet {
+        padding-top: 0;
+        .ui.segment {
+            padding: 0 0 0 1em !important;
+        }
+    }
+}

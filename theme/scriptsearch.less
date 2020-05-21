@@ -1,0 +1,96 @@
+
+
+/*******************************
+    Script search dialog
+*******************************/
+
+.ui.searchdialog {
+    .cards {
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin-top: 0.5rem;
+    }    
+    .ui.card {
+        height: 20rem;
+        .ui.cardimage {
+            background-color: transparent;
+            height: 11rem;
+            &.upload {
+                margin: 3em auto;
+            }
+        }
+        .content:not(.extra) {
+            .header {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            .description {
+                height: 2.8em;
+                overflow: hidden;
+            }
+            .description.long  {
+                height: 14em;
+            }
+        }
+    }
+    /* Search input */
+    .ui.search {
+        max-width: 50%;
+        margin: auto;
+    }
+
+    .ui.inline.loader {
+        margin-top: 4em;
+        :after, :before {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+}
+
+// reduce all card sizes
+@media only screen and (max-width: @largestMobileScreen) {
+    .ui.searchdialog {
+        .ui.card, .ui.cards>.card {
+            width: 9rem;
+            height: 9rem;
+
+            .ui.cardimage {
+                height: 5rem;
+                &.upload {
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+/*******************************
+    Script manager dialog
+*******************************/
+
+.ui.modal .empty-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.ui.modal.scriptmanager {
+    .sort-by {
+        display: flex;
+        margin-bottom: 1rem;
+
+        > div {
+            margin-left: auto;
+        }
+        .item.no-icon {
+            padding-left: 3.1rem !important;
+        }
+    }
+
+    .ui.card.file .content {
+        margin-right: 3rem;
+    }
+}

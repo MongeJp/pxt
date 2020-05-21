@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "module": "commonjs",
+        "outDir": "../built/webapp",
+        "rootDir": ".",
+        "newLine": "LF",
+        "sourceMap": false,
+        "moduleResolution": "node",
+        "isolatedModules": false,
+        "jsx": "react",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "declaration": false,
+        "preserveConstEnums": true,
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "scripthost",
+            "es6"
+        ],
+        "types": [
+            "react",
+            "react-dom",
+            "bluebird"
+        ],
+        "incremental": false
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

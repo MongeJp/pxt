@@ -1,0 +1,2 @@
+
+testNamespace.objectDestructuringTest(whatever => {});

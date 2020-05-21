@@ -1,0 +1,34 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+<block type="function_definition">
+<mutation name="getStuff" >
+</mutation>
+<statement name="STACK">
+<block type="function_return">
+<value name="RETURN_VALUE">
+<shadow type="math_number"><field name="NUM">0</field></shadow>
+<block type="text">
+<field name="TEXT">Unknown</field>
+</block>
+</value>
+</block>
+</statement>
+</block>
+<block type="pxt-on-start">
+<statement name="HANDLER">
+<block type="variables_set">
+<field name="VAR">test</field>
+<value name="VALUE">
+<shadow type="math_number"><field name="NUM">0</field></shadow>
+<block type="function_call_output">
+<mutation name="getStuff" />
+</block>
+</value>
+<next>
+<block type="function_call">
+<mutation name="getStuff" />
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

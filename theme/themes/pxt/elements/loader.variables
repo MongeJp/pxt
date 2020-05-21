@@ -1,0 +1,12 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+@loaderSpeed: 2s;
+@loaderAngle: 5deg;
+@loaderAnimation: loader-pxt;
+
+@loaderLineColor: @primaryColor;
+@invertedLoaderLineColor: @lightPrimaryColor;
+
+@large   : 200px;

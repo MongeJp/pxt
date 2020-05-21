@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "declaration": true,
+        "outDir": "../../built/tests",
+        "newLine": "LF",
+        "module": "commonjs",
+        "types": ["chai", "mocha", "node", "bluebird"],
+        "sourceMap": false
+    },
+    "files": [
+        "compilerunner.ts",
+        "../common/testUtils.ts",
+        "../common/testHost.ts"
+    ]
+}

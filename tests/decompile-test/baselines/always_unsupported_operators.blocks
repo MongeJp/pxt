@@ -1,0 +1,169 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+<block type="pxt-on-start">
+<statement name="HANDLER">
+<block type="typescript_statement">
+<mutation declaredvars="x" numlines="1" error="Could not find operator &#60;&#60;" line0="let x &#61; 0 &#60;&#60; 1&#59;" />
+<next>
+<block type="typescript_statement">
+<mutation declaredvars="x2" numlines="1" error="Could not find operator &#62;&#62;" line0="let x2 &#61; 0 &#62;&#62; 1&#59;" />
+<next>
+<block type="typescript_statement">
+<mutation declaredvars="x3" numlines="1" error="Could not find operator &#62;&#62;&#62;" line0="let x3 &#61; 0 &#62;&#62;&#62; 1&#59;" />
+<next>
+<block type="typescript_statement">
+<mutation declaredvars="x4" numlines="1" error="Could not find operator &#124;" line0="let x4 &#61; 0 &#124; 1&#59;" />
+<next>
+<block type="typescript_statement">
+<mutation declaredvars="x5" numlines="1" error="Could not find operator &#38;" line0="let x5 &#61; 0 &#38; 1&#59;" />
+<next>
+<block type="typescript_statement">
+<mutation declaredvars="x6" numlines="1" error="Could not find operator &#94;" line0="let x6 &#61; 0 &#94; 1&#59;" />
+<next>
+<block type="variables_set">
+<field name="VAR">x7</field>
+<value name="VALUE">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="typescript_statement">
+<mutation numlines="1" error="Unsupported operator token in statement AsteriskEqualsToken" line0="x7 &#42;&#61; 1&#59;" />
+<next>
+<block type="variables_set">
+<field name="VAR">x8</field>
+<value name="VALUE">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="typescript_statement">
+<mutation numlines="1" error="Unsupported operator token in statement SlashEqualsToken" line0="x8 &#47;&#61; 1&#59;" />
+<next>
+<block type="variables_set">
+<field name="VAR">x9</field>
+<value name="VALUE">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="typescript_statement">
+<mutation numlines="1" error="Unsupported operator token in statement PercentEqualsToken" line0="x9 &#37;&#61; 1&#59;" />
+<next>
+<block type="variables_set">
+<field name="VAR">x10</field>
+<value name="VALUE">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="typescript_statement">
+<mutation numlines="1" error="Unsupported operator token in statement BarEqualsToken" line0="x10 &#124;&#61; 1&#59;" />
+<next>
+<block type="variables_set">
+<field name="VAR">x11</field>
+<value name="VALUE">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="typescript_statement">
+<mutation numlines="1" error="Unsupported operator token in statement AmpersandEqualsToken" line0="x11 &#38;&#61; 1&#59;" />
+<next>
+<block type="variables_set">
+<field name="VAR">x12</field>
+<value name="VALUE">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="typescript_statement">
+<mutation numlines="1" error="Unsupported operator token in statement LastBinaryOperator" line0="x12 &#94;&#61; 1&#59;" />
+<next>
+<block type="variables_set">
+<field name="VAR">x13</field>
+<value name="VALUE">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="typescript_statement">
+<mutation numlines="1" error="Unsupported operator token in statement LessThanLessThanEqualsToken" line0="x13 &#60;&#60;&#61; 1&#59;" />
+<next>
+<block type="variables_set">
+<field name="VAR">x14</field>
+<value name="VALUE">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="typescript_statement">
+<mutation numlines="1" error="Unsupported operator token in statement GreaterThanGreaterThanEqualsToken" line0="x14 &#62;&#62;&#61; 1&#59;" />
+<next>
+<block type="variables_set">
+<field name="VAR">x15</field>
+<value name="VALUE">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="typescript_statement">
+<mutation numlines="1" error="Unsupported operator token in statement GreaterThanGreaterThanGreaterThanEqualsToken" line0="x15 &#62;&#62;&#62;&#61; 1&#59;" />
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

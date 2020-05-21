@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "declaration": true,
+        "out": "../../built/tests/tests.spec.js",
+        "newLine": "LF",
+        "types": ["chai", "mocha", "bluebird"],
+        "sourceMap": false
+    },
+    "files": [
+        "test.spec.ts",
+        "commentparsing.spec.ts",
+        "fieldUserEnum.spec.ts"
+    ]
+}

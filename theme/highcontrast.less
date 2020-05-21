@@ -1,0 +1,711 @@
+/* Import all components */
+@import 'themes/default/globals/site.variables';
+@import 'themes/pxt/globals/site.variables';
+
+/* Reference import */
+@import (reference) "semantic.less";
+
+/*******************************
+        High Contrast
+*******************************/
+
+@selected: yellow;
+@disabled: #3ff23f;
+
+/* Messages */
+#msg .hc {
+    background-color: black !important;
+    border: 1px solid white !important;
+    border-radius: 0em;
+    color: white !important;
+}
+
+@HCRootBackground: black;
+@HCblocklySvgColor: black;
+@HCsimulatorBackground: black;
+@HCblocklySvgColor: black;
+
+@HCmainMenuBackground: white;
+@HCmainMenuTextColor: black;
+@HCmainMenuInverseTextColor: white;
+
+@HCblocklyToolboxColor: black;
+@HCblocklyTreeLabelColor: white;
+@HCblocklyTreeLabelSelectedColor: white;
+
+@HCeditorToolsBackground: black;
+
+@HCbackground: black;
+@HCtextColor: white;
+
+@HChomeScreenBackground: black;
+
+@HCaccessibleMenuBackground: black;
+@HCaccessibleMenuColor: white;
+
+.hc {
+
+    /* Focus */
+
+    *[tabindex='0'],
+    *[tabindex*='d1'],
+    *[tabindex*='d2'], /* Takes items with a defined tabIndex from 0 to 29. */
+    *[role='menuitem'],
+    a:not([tabindex='-1']),
+    input:not([tabindex='-1']),
+    button:not([tabindex='-1']),
+    #monacoEditor .blocklyTreeRow,
+    #monacoEditor .monacoDraggableBlock {
+        &:focus, &:hover {
+            outline: 2px solid @selected !important;
+        }
+    }
+
+    p {
+        color: @HCtextColor !important;
+        background-color: @HCbackground !important;
+    }
+
+    #tutorialcard .prevbutton,
+    #tutorialcard .nextbutton {
+        &:hover, &:focus {
+            > i, > span, > i.orange {
+                color: @HCtextColor !important;
+            }
+        }
+    }
+
+    @media all and (pointer:coarse) { /* If touch screen */
+        *[tabindex='0'],
+        *[tabindex*='d1'],
+        *[tabindex*='d2'],
+        *[role='menuitem'],
+        a:not([tabindex='-1']),
+        input:not([tabindex='-1']),
+        button:not([tabindex='-1']),
+        #monacoEditor .blocklyTreeRow,
+        #monacoEditor .monacoDraggableBlock {
+            &:focus, &:hover {
+                outline: 1px solid transparent !important;
+            }
+        }
+    }
+
+    .blocklyWidgetDiv *,
+    .blocklySVG *,
+    .monaco-editor *,
+    #monacoEditor *,
+    .blocklyTreeRoot {
+        &:focus, &:hover {
+            outline: none !important;
+        }
+    }
+
+    /* Toolbox */
+    .pxtToolbox:not(.invertedToolbox) {
+        span.blocklyTreeLabel {
+            color: @HCblocklyTreeLabelColor;
+        }
+        .blocklyTreeSelected span.blocklyTreeLabel {
+            color: @HCblocklyTreeLabelSelectedColor;
+        }
+        .blocklyTreeRow:not(.blocklyTreeSelected):hover,
+        .blocklyTreeRow:not(.blocklyTreeSelected):focus {
+            background-color: lighten(@HCblocklyToolboxColor, 25.0);
+        }
+    }
+
+    #monacoEditor .monacoDraggableBlock {
+        background: none !important;
+
+        span.argName {
+            border: 1px solid rgba(255, 255, 255, .7);
+        }
+    }
+
+    /* Blockly flyout */
+    path.blocklyFlyoutBackground {
+        fill: @HCblocklySvgColor !important;
+        fill-opacity: 1 !important;
+        stroke-width: 4px;
+        stroke: @HCblocklyTreeLabelColor;
+    }
+    .monacoFlyout {
+        background: @HCblocklySvgColor !important;
+        border-right: 4px solid @HCtextColor !important;
+
+        .monacoBlock {
+            color: @HCtextColor !important;
+        }
+        .blockHandle {
+            background: @HCblocklySvgColor !important;
+        }
+    }
+
+    .blocklyFlyoutButtonBackground {
+        stroke: @HCtextColor !important;
+    }
+
+    /* Main editor areas */
+
+    #root {
+        background: @HCRootBackground !important;
+    }
+    #filelist {
+        background: @HCsimulatorBackground !important;
+
+        #boardview {
+            background: @HCsimulatorBackground !important;
+        }
+    }
+    svg.blocklySvg {
+        background-color: @HCblocklySvgColor !important;
+    }
+
+    .blocklyMainBackground {
+        fill: transparent !important;
+    }
+
+    .blocklyToolboxDiv, .monacoToolboxDiv {
+        background: @HCblocklyToolboxColor !important;
+        border-right: 1px solid @HCblocklyTreeLabelColor !important;
+    }
+    .blocklyPath {
+        stroke-width: 3px;
+    }
+
+    /* Menu bar */
+    .menubar .menu > .item:focus > i,
+    .menubar .menu > .item:focus > span {
+        color: @selected !important;
+    }
+
+    .menu .ui.label.betalabel {
+        color: @HCbackground !important;
+    }
+
+    #mainmenu:not(.inverted), #homemenu:not(.inverted) {
+        background-color: @HCmainMenuBackground !important;
+        color: @HCmainMenuTextColor !important;
+        border-bottom: 4px solid @HCtextColor;
+
+        .ui.item {
+            color: @HCmainMenuTextColor;
+        }
+        .item.editor-menuitem .ui.grid {
+            border: 1px solid @HCbackground !important;
+        }
+    }
+    #mainmenu.inverted, #homemenu.inverted {
+        background-color: @HCmainMenuTextColor !important;
+        color: @HCmainMenuBackground !important;
+        border-bottom: 4px solid @HCtextColor;
+
+        .ui.item {
+            color: @HCmainMenuBackground;
+        }
+        .item.editor-menuitem .ui.grid {
+            border: 1px solid @HCtextColor !important;
+        }
+    }
+
+    .simtoolbar .debug-button.orange {
+        color: @HCeditorToolsBackground !important;
+        background-color: @HCtextColor !important;
+    }
+
+    /* Debugger toolbox */
+    .debugtoolbar .ui.compact.menu {
+        color: @HCblocklyTreeLabelColor !important;
+        background-color: @HCblocklyToolboxColor !important;
+        border-bottom: solid @HCblocklyTreeLabelColor 1px !important;
+
+        .ui.item.link.dbg-btn {
+            .icon.green, .icon.blue, .ui.text, .xicon  {
+                color: @HCblocklyTreeLabelColor !important;
+            }
+        }
+        .ui.item.link.dbg-btn.disabled {
+            .icon.green, .icon.blue, .ui.text, .xicon, .icon.disabled.icon-and-text {
+                opacity: 1 !important;
+                color: @disabled !important;
+            }
+        }
+        .ui.item.link.dbg-btn.dbg-trace.tracing {
+            background-color: @HCtextColor !important;
+            .xicon  {
+                color: @HCblocklyToolboxColor !important;
+            }
+        }
+    }
+
+    .varExplorer {
+        background-color: @HCblocklyToolboxColor !important;
+
+        .variableTableHeader, .variableTablePlaceholder {
+            color: @HCblocklyTreeLabelColor !important;
+            background-color: @HCblocklyToolboxColor !important;
+        }
+
+        .ui.segment.debugvariables {
+            .item {
+                background-color: @HCblocklyToolboxColor !important;
+
+                .variableAndValue {
+                    .variable.varname, .variable.detail {
+                        color: @HCblocklyTreeLabelColor !important;
+
+                        .varval.number, .varval.string, .varval.boolean, .varval.array, .varval.Sprite {
+                            color: @HCblocklyTreeLabelColor !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Editor switch toggle */
+    .menubar .ui.menu.fixed .item.editor-menuitem .ui.grid {
+        background: @HCbackground !important;
+        .item:not(.active) {
+            opacity: 1 !important;
+            color: @HCmainMenuInverseTextColor !important;
+        }
+        .item.active,
+        .menu > .item.selected {
+            background: @HCtextColor !important;
+            color: @HCmainMenuTextColor !important;
+        }
+
+        .dropdown, .dropdown:hover {
+            .selected i, .selected span {
+                color: @HCmainMenuTextColor !important;
+            }
+        }
+
+        .dropdown.active:hover:not(.visible) i {
+            color: @HCmainMenuTextColor !important;
+        }
+
+        .dropdown:focus:not(.visible) i,
+        .dropdown.active:focus:not(.visible) i {
+            color: @HCtextColor !important;
+        }
+    }
+
+    /* Editor toolbar */
+    #editortools, #downloadArea {
+        background: @HCeditorToolsBackground !important;
+    }
+    #editortools {
+        border-top: 4px solid @HCtextColor;
+    }
+
+    /* Buttons */
+    .ui.button {
+        background: @HCbackground !important;
+        color: @HCtextColor !important;
+        border: 1px solid @HCtextColor !important;
+
+        &:focus, &:hover {
+            color: @HCtextColor !important;
+            border-color: @selected !important;
+
+            i, span {
+                color: @HCtextColor !important;
+            }
+        }
+
+        .inverted.icon {
+            color: @HCtextColor !important;
+        }
+    }
+
+    .ui.button.disabled {
+        opacity: 1 !important;
+        border: 1px solid @disabled !important;
+
+        i, span {
+            color: @disabled !important;
+        }
+    }
+
+    .filemenu .ui.button,
+    .header-close .ui.button {
+        &:focus, &:hover {
+            color: @selected !important;
+            i, span {
+                color: @selected !important;
+            }
+        }
+    }
+
+    /* Inputs */
+    .ui.input input,
+    .ui.input .input {
+        background: @HCbackground !important;
+        color: @HCtextColor !important;
+        border: 1px solid @HCtextColor !important;
+    }
+    .ui.form {
+        .field>label {
+            color: @HCtextColor !important;
+        }
+        input,
+        textarea,
+        .ui.secondary.segment {
+            background: @HCbackground !important;
+            color: @HCtextColor !important;
+            border: 1px solid @HCtextColor !important;
+        }
+    }
+
+    input,
+    .input,
+    .ui.form {
+        ::placeholder {
+            color: darken(@HCtextColor, 20.0) !important;
+        }
+
+        ::selection {
+            color: @HCbackground !important;
+            background: @HCtextColor !important;
+        }
+    }
+
+    .ui.header {
+        color: @HCtextColor !important;
+    }
+
+    /* Home screen */
+    .projectsdialog, .projectsdialog .tabsegment {
+        background: @HChomeScreenBackground !important;
+        color: @HCtextColor !important;
+        border-color: @HCtextColor !important;
+
+        .header,
+        span.view-all-button {
+            opacity: 1 !important;
+            color: @HCtextColor !important;
+        }
+
+        .homefooter a,
+        .homefooter i {
+            color: @HCtextColor !important
+        }
+    }
+
+    .projectsdialog {
+        .gallerysegment {
+            .ui.header {
+                &.myproject-header {
+                    &:focus, &:hover {
+                        text-decoration: underline;
+                        color: @HCtextColor;
+                    }
+                }
+            }
+        }
+        .detailview {
+            .closeIcon .remove.icon {
+                background-color: @HCbackground;
+            }
+            .header {
+                color: @HCtextColor;
+            }
+            .ui.grid {
+                background-color: @HChomeScreenBackground;
+                border-width: 2px 0;
+                border-color: @HCtextColor;
+                border-style: solid;
+            }
+            .actions {
+                .card-action {
+                    border: 2px solid @HCtextColor;
+                    .button.attached i {
+                        opacity: 1;
+                        color: @HCtextColor;
+                    }
+                }
+                .card-action-title {
+                    color: @HCtextColor;
+                }
+            }
+        }
+    }
+
+    .ui.form .content .description {
+        color: @HCtextColor;
+    }
+
+    .ui.table {
+        th, tr, i,
+        th.positive, tr.postive {
+            color: @HCtextColor !important;
+            background: @HCbackground !important;
+        }
+    }
+
+    .carouselarrow {
+        background: @HCbackground;
+        color: @HCtextColor;
+        border: 2px solid @HCtextColor !important;
+    }
+
+    /* Cards */
+    .card {
+        background: @HCbackground !important;
+        border: 2px solid @HCtextColor !important;
+        border-radius: initial !important;
+        box-shadow: initial !important;
+
+        .header, .description, .meta {
+            color: @HCtextColor !important;
+        }
+
+        &:focus, &:hover {
+            .header, .meta, .description {
+                color: @selected !important;
+            }
+        }
+
+        .ui.orange.labels .label, .ui.orange.label {
+            background: @disabled !important;
+            border-color: @disabled !important;
+            color: @HCbackground !important;
+        }
+    }
+
+    /* File menu */
+    .filemenu {
+        .item, .ui.button {
+            background: @HCbackground !important;
+            color: @HCtextColor !important;
+            border: 1px solid @HCtextColor !important;
+        }
+        .item:focus {
+            border-color: @selected !important;
+
+            span {
+                color: @HCbackground !important;
+            }
+        }
+    }
+
+    /* PxtJson */
+    #maineditor {
+        border-left: 1px solid @HCtextColor !important;
+        background: @HCbackground;
+
+        .ui.segment {
+            border: 1px solid @HCtextColor;
+            background: @HCbackground;
+            color: @HCtextColor;
+
+            .ui.toggle.checkbox {
+                label {
+                    color: @HCtextColor !important;
+                }
+
+                .box:before, label:before {
+                    border: 1px solid @HCtextColor;
+                }
+            }
+        }
+    }
+
+    /* Serial editor */
+
+    #serialPreview div {
+        color: @HCtextColor;
+    }
+
+    #serialCharts .ui.segment {
+        background-color: @HCtextColor;
+    }
+
+    #serialEditor {
+        background-color: @HCbackground;
+    }
+
+    #serialHeader .ui.header {
+        color: @HCbackground;
+    }
+
+    #serialConsole {
+        background-color: @HCbackground;
+        color: @HCtextColor;
+        border-color: @HCtextColor;
+    }
+
+    #serialPreview .label {
+        border: 10px solid @HCtextColor !important;
+        &:hover {
+            border-color: darken(@HCtextColor, 10.0) !important;
+        }
+    }
+
+    .ui.button.labeled.icon.editorBack {
+        background: @HCtextColor !important;
+    }
+
+    /* Hyperlinks */
+    a {
+        color: @HCtextColor !important;
+    }
+
+    #sidedocsbar {
+        a {
+            color: @HCbackground !important;
+
+            &:focus {
+                color: @selected !important;
+
+                i, span {
+                    color: @selected !important;
+                }
+            }
+        }
+    }
+
+    /* Dropdown */
+    .ui.dropdown .menu,
+    .ui.menu .ui.dropdown .menu {
+        border: 1px solid @HCtextColor !important;
+    }
+
+    .ui.dropdown .menu,
+    .ui.dropdown .menu > .item,
+    .ui.menu .ui.dropdown .menu,
+    .ui.menu .ui.dropdown .menu > .item {
+        background: @HCbackground !important;
+        color: @HCtextColor !important;
+
+        &:focus {
+            color: @HCtextColor !important;
+            font-weight: normal !important;
+
+            i, span {
+                color: @HCtextColor !important;
+                font-weight: normal !important;
+            }
+        }
+    }
+
+    .ui.dropdown .menu > .divider,
+    .ui.menu .ui.dropdown .menu > .divider {
+        background: @HCbackground !important;
+        border-top: 1px solid @HCtextColor !important;
+    }
+
+    #editordropdown .menu > .item:not(.selected) {
+        background: transparent !important;
+    }
+
+    /* Tab list in Modals*/
+    .ui.secondary.menu > .item,
+    .ui.secondary.pointing.menu > .item,
+    .ui.secondary.inverted.menu .link.item {
+        color: @HCtextColor !important;
+        border: 1px solid @HCtextColor !important;
+    }
+
+    .ui.secondary.menu > .item.active, .ui.secondary.menu > .item.active:hover,
+    .ui.secondary.pointing.menu > .item.active, .ui.secondary.pointing.menu > .item.active:hover {
+        border: 2px solid @selected !important;
+        border-radius: initial !important;
+        box-shadow: initial !important;
+    }
+
+    /* Tutorial */
+    .ui.tutorialsegment {
+        background-color: @HCbackground !important;
+        color: @HCtextColor !important;
+
+        .tutorialmessage {
+            border: none !important;
+
+            &:focus {
+                color: @selected !important;
+            }
+
+        }
+
+        .tooltip, .tooltip:before {
+            background-color: @HCbackground;
+            border: 2px solid @HCtextColor;
+            color: @HCtextColor;
+        }
+
+        .tooltip:before {
+            border-color: @HCtextColor transparent transparent @HCtextColor !important;
+        }
+
+        .tutorialhint {
+            border-color: @HCtextColor;
+            background-color: @HCbackground;
+            color: @HCtextColor;
+
+            &:before {
+                border-right-color: @HCtextColor;
+            }
+        }
+    }
+
+    .ui.label {
+        background-color: @HCbackground !important;
+        border: 2px solid @HCtextColor !important;
+    }
+
+    .ui.blue.labels .label, .ui.blue.label {
+        border-color: @selected !important;
+    }
+
+
+    /* Modals */
+    .ui.modal {
+        border: 2px solid @HCbackground !important;
+        border-radius: initial !important;
+        box-shadow: initial !important;
+
+        > .closeIcon .close {
+            color: @HCtextColor !important;
+        }
+    }
+
+    .ui.modal, .ui.modal > .header, .ui.modal > .content, .ui.modal > .actions, .ui.modal > .segment {
+        background: @HCbackground !important;
+        color: @HCtextColor !important;
+    }
+
+    /* Accessible menu */
+    .ui.menu.accessibleMenu, #accessibleMenu {
+        .ui.item.link {
+            color: @HCaccessibleMenuColor !important;
+            background: @HCaccessibleMenuBackground !important;
+        }
+    }
+
+    [data-tooltip]:after,
+    [data-tooltip]:before {
+        color: @HCtextColor!important;
+        background-color: @HCbackground!important;
+    }
+
+    [data-tooltip]:after {
+        border: 1px solid @HCtextColor!important;
+    }
+
+    [data-tooltip]:before {
+        box-shadow: 1px 1px 0 0 @HCtextColor!important;
+    }
+}
+
+/* > Small Monitor */
+@media only screen and (min-width: @computerBreakpoint) {
+    /* Hide the editor toolbor in tutorial mode */
+    .hc.tutorial #editortools  {
+        background: transparent !important;
+        border-top: 0px;
+    }
+}

@@ -1,0 +1,16 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+<block type="test_handler_arguments2">
+<statement name="HANDLER">
+</statement>
+</block>
+<block type="test_handler_arguments2">
+<mutation numargs="1" arg0="a" />
+<statement name="HANDLER">
+</statement>
+</block>
+<block type="test_handler_arguments2">
+<mutation numargs="2" arg0="one" arg1="two" />
+<statement name="HANDLER">
+</statement>
+</block>
+</xml>

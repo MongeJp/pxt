@@ -1,0 +1,36 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="e0Tbq-rBQ)!kI3yw`iJV">value</variable>
+    <variable type="" id="CR_=({S|Ee;P:(}vVeAw">list</variable>
+    <variable type="" id="XpWX`b1LO@pqR!fXLuFQ">item</variable>
+  </variables>
+  <block type="pxt-on-start" x="0" y="0">
+    <statement name="HANDLER">
+      <block type="controls_for_of">
+        <field name="VAR" id="e0Tbq-rBQ)!kI3yw`iJV" variabletype="">value</field>
+        <value name="LIST">
+          <shadow type="variables_get">
+            <field name="VAR" id="CR_=({S|Ee;P:(}vVeAw" variabletype="">list</field>
+          </shadow>
+        </value>
+        <statement name="DO">
+          <block type="variables_set">
+            <field name="VAR" id="XpWX`b1LO@pqR!fXLuFQ" variabletype="">item</field>
+            <value name="VALUE">
+              <shadow id="D75K(TFB~I+;CzZGC-7," type="math_number">
+                <field name="NUM">0</field>
+              </shadow>
+              <block type="lists_length">
+                <value name="VALUE">
+                  <block type="variables_get">
+                    <field name="VAR" id="CR_=({S|Ee;P:(}vVeAw" variabletype="">list</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>
